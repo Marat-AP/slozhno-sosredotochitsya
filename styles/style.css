@@ -6,25 +6,14 @@ html {
 .page {
   background: var(--background-image) no-repeat top center, var(--background-color);
   color: var(--main-text-color);
-  background-size: auto 668px;
+  background-size: cover;
   background-attachment: fixed;
-}
-
-@media (width >= 768px) {
-  .page {
-    background-size: auto 1024px;
-  }
-}
-
-@media (width >= 1024px) {
-  .page {
-    background-size: auto 700px;
-  }
 }
 
 .header {
   position: relative;
   padding: 0 10px;
+  min-height: 100%;
 }
 
 @media (width >= 768px) {
@@ -39,6 +28,7 @@ html {
   text-transform: uppercase;
   top: 11px;
   right: 39px;
+  font-size: 18px;
 }
 
 @media (width >= 768px) {
@@ -65,9 +55,17 @@ html {
   padding-top: 75px;
 }
 
+.header__theme-menu-list {
+  padding: 0;
+}
+
 @media (width >= 768px) {
   .header__theme-menu {
     padding-top: 192px;
+  }
+
+  .header__theme-menu-list {
+    padding-right: 19px;
   }
 }
 
@@ -75,7 +73,6 @@ html {
   display: grid;
   justify-content: end;
   gap: 15px;
-  padding-right: 19px;
 }
 
 @media (width >= 1024px) {
@@ -187,6 +184,40 @@ html {
     align-self: flex-end;
     width: 491px;
     margin-top: 17px;
+  }
+}
+
+.decorated-zone::before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-left: 1px solid var(--title-shadow);
+  border-bottom: 1px solid var(--title-shadow);
+  left: 10px;
+  bottom: 17px;
+}
+
+.decorated-zone::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-right: 1px solid var(--title-shadow);
+  border-top: 1px solid var(--title-shadow);
+  right: 10px;
+  top: 10px;
+}
+
+@media (width >= 768px) {
+  .decorated-zone::before {
+    left: 20px;
+    bottom: 20px;
+  }
+
+  .decorated-zone::after {
+    right: 20px;
+    top: 20px;
   }
 }
 
@@ -397,6 +428,11 @@ html {
 .image-section__image {
   margin-bottom: 10px;
   max-width: 355px;
+}
+
+.image-section__image-list {
+  display: grid;
+  justify-content: center;
 }
 
 @media (width >= 768px) {
