@@ -13,7 +13,8 @@ html {
 .header {
   position: relative;
   padding: 0 10px;
-  min-height: 100%;
+  height: 100vh;
+  min-height: 375px;
 }
 
 @media (width >= 768px) {
@@ -112,6 +113,7 @@ html {
 
 .header__theme-menu-button:focus {
   border-bottom: 1px solid;
+  outline: none;
 }
 
 .header__theme-menu-button_active {
@@ -230,7 +232,6 @@ html {
   .main {
     padding: 0 20px;
     margin-top: 60px;
-    gap: 80px;
   }
 }
 
@@ -242,6 +243,8 @@ html {
 
 .section {
   line-height: 23.4px;
+  display: flex;
+  justify-content: center;
 }
 
 .section__title {
@@ -269,6 +272,15 @@ html {
 
 .section__article-text-link {
   text-shadow: 1.5px 1.5px 0 var(--link-shadow);
+}
+
+.section__article-text-link:hover {
+  border-bottom: 1px solid;
+  outline: none;
+}
+
+.section__article-text-link:focus {
+  outline: 1px solid;
 }
 
 .section__article-list {
@@ -313,7 +325,9 @@ html {
 }
 
 .column-section {
+  display: grid;
   line-height: 23.4px;
+  justify-content: center;
 }
 
 .column-section__title {
@@ -374,6 +388,8 @@ html {
 
 .new-section {
   margin-top: 50px;
+  display: flex;
+  justify-content: center;
 }
 
 @media (width >= 768px) {
@@ -553,6 +569,9 @@ html {
 }
 
 .footer {
+  display: flex;
+  justify-content: center;
+  position: relative;
   color: var(--title-color);
   text-shadow: 2px 2px 0 var(--title-shadow);
   font-size: 80px;
