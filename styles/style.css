@@ -13,8 +13,7 @@ html {
 .header {
   position: relative;
   padding: 0 10px;
-  height: 100vh;
-  min-height: 375px;
+  min-height: 100vh;
 }
 
 @media (width >= 768px) {
